@@ -54,11 +54,11 @@ generator client {
 
 model User {
    id    String  @id @default(auto()) @map("_id") @db.ObjectId
-   name          String?
+  name          String?
   email         String?   @unique
   image         String?
   password String 
-  Product Product[]
+  //Product Product[]
   // Cart Cart[]
   // Review Review[]
   // Purchased Purchased[]
@@ -71,12 +71,12 @@ model Product{
   style String
   store String
   size String
-  inventory String
+  inventory Int
   color String
    price  Float
   images String 
   userId   String  @db.ObjectId
-  User User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  //User User @relation(fields: [userId], references: [id], onDelete: Cascade)
   // Cart Cart[]
   // Review Review[]
   // Purchased Purchased[]
